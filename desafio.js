@@ -308,6 +308,10 @@ vidaAtual -= 10; // Pequeno dano temporal
 
 console.log("📊 Exploração completa! XP: " + experiencia + " | Vida: " + vidaAtual);
 
+for(let i = 0; i >inventario; i++) {
+  console.log("Adicionou mais um item encontrado ao invetário");
+}
+
 
 //4. Gerenciamento de aliados com for 
 // === CAPÍTULO 3: A UNIÃO DOS ALIADOS ===
@@ -315,7 +319,7 @@ console.log("");
 console.log("🤝 CAPÍTULO 3: Reunindo os Aliados Arcanos");
 
 // Recrutando aliados com for tradicional
-console.log("🏹 " + nomePersonagem + " convoca seus aliados para a batalha final:");
+console.log("🏹 " + nomePersonagem + " convoca seus aliados para a última batalha:");
 
 for (let i = 0; i < aliados.length; i++) {
 let aliado = aliados[i];
@@ -323,7 +327,7 @@ console.log("⚡ Slad " + (i + 1) + ": " + aliado + " se junta à missão!");
 
 // Cada posição no array determina habilidade especial
 if (i === 0) { // Primeiro aliado - Líder mágico
-console.log("🔮 Como líder mágico, " + aliado + " multiplica o poder da equipe!");
+console.log("🔮 Como líder mágico, " + aliado + " multiplica o poder e a magia de cada membro da equipe!");
 ouro += 50;
 } else if (i === 1) { // Segundo aliado - Defensor
 console.log("🛡️ Como defensor principal, " + aliado + " fortalece a resistência!");
@@ -335,3 +339,82 @@ experiencia += 40;
 }
 
 console.log("🎖️ Equipe completa! Ouro: " + ouro + " | Vida máxima: " + vidaMaxima);
+
+
+// === CAPÍTULO 4: A BATALHA FINAL DOS ARRAYS ===
+console.log("");
+console.log("🐉 CAPÍTULO 4: Confronto com as Criaturas do Castelo");
+
+// Sistema de batalha usando arrays e for tradicional
+let inimigosBatalha = ["Morgath", "Serpenthia das sombras", "Darius"];
+let danoRecebido = [];
+
+console.log("💀 " + nomePersonagem + " enfrenta " + inimigosBatalha.length + " inimigos épicos!");
+
+// Batalha usando for tradicional para controle preciso
+for (let i = 0; i < inimigosBatalha.length; i++) {
+let inimigo = inimigosBatalha[i];
+let dano = Math.floor(Math.random() * 30) + 10; // Dano entre 10 e 39
+
+console.log("⚔️ Rodada " + (i + 1) + " - Enfrentando: " + inimigo);
+console.log("💥 " + nomePersonagem + " causa " + dano + " de dano!");
+
+danoRecebido.push(dano); // Armazena dano para cálculos posteriores
+
+// Lógica especial para cada rodada baseada no índice
+if (i === 0) {
+console.log("💎 Primeira vitória! Cristais fragmentados concedem bônus!");
+tesouroColetado.push("Fragmento de Cristal");
+} else if (i === 1) {
+console.log("🌑 Segunda batalha! As sombras drenam energia, mas " + nomePersonagem + " resiste!");
+vidaAtual -= 15;
+} else {
+console.log("🔥 Batalha final! O dragão recua! Vitória épica alcançada!");
+experiencia += 100;
+tesouroColetado.push("Escama Dragônica");
+}
+}
+
+// Calculando estatísticas da batalha usando for tradicional
+let danoTotal = 0;
+for (let i = 0; i < danoRecebido.length; i++) {
+danoTotal += danoRecebido[i];
+console.log("📊 Rodada " + (i + 1) + " - Dano: " + danoRecebido[i]);
+}
+
+console.log("⚡ Dano total causado: " + danoTotal);
+console.log("🏆 Tesouros coletados: " + tesouroColetado.length + " itens épicos!");
+
+// === EPÍLOGO: O MESTRE DOS ARRAYS ===
+console.log("");
+console.log("👑 === EPÍLOGO: " + nomePersonagem + " - CONQUISTADOR DO CASTELO ===");
+
+// Estatísticas finais da jornada
+console.log("📈 Estatísticas Finais da Aventura:");
+console.log("• Nível alcançado: " + nivel);
+console.log("• Experiência total: " + experiencia);
+console.log("• Vida restante: " + vidaAtual + "/" + vidaMaxima);
+console.log("• Ouro acumulado: " + ouro);
+console.log("• Itens no inventário: " + inventario.length);
+console.log("• Aliados conquistados: " + aliados.length);
+console.log("• Tesouros épicos: " + tesouroColetado.length);
+
+// === ADICIONE SUAS 10+ LINHAS ÉPICAS DE CONTINUAÇÃO AQUI ===
+console.log("");
+console.log("🌟 A HISTÓRIA CONTINUA...");
+console.log("Após conquistar o Castelo dos Arrays, " + nomePersonagem + " permanecia ofegante, sua capa rasgada pelo embate contra o mago. Ao seu lado, seus aliados  observam o campo de batalha..");
+console.log("O Corpo do mago já imóvel, mas o ar ao redor pulsava com uma energia sombria.");
+console.log("De repente sombras se ergueram, formando uma criatura ancestral. O céu ficou negro, o vento cortante.");
+console.log("O mago fechou os olhos, sentindo seu poder pulsar em suas veias, ele sabia que não sobriviveria ao próximo feitiço de Morgana, mas também não havia outra escolha.");
+console.log("O mago levanta de uma forma totalmente misteriosa e bruta.");
+console.log("Foi um prazer lutar com vocês, disse o mago.");
+console.log("Morgana gritou para que ele parasse, mas ja era tarde.");
+console.log("Morgana pegou sdua varinha mágica, recitou palavras proibidas e liberou toda a sua magia de uma só vez.");
+console.log("Sua magia fez o mago virar pó, mas infelizmente também foi levada, como se sua magia tivesse um efeito reverso.");
+console.log("A jornada estava longe do fim - era apenas o início de uma saga maior.");
+console.log("A varinha de "+nomePersonagem+" continuava no chão, depois daquele momento, todos os aliados esperavam o momento da volta triunfante de Morgana.");
+
+console.log("");
+console.log("🎯 FIM DO NÍVEL 3 | AGUARDE FUTURAS AVENTURAS NA ACADEMIA DOS CÓDIGOS! 🎯");
+
+
